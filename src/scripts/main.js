@@ -1,11 +1,11 @@
 $(function () { 
 
-  $('.reviews__slider').slick({
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
-    dots: true,
-    arrows: true,
-    fade: true,
-    autoplay: true
+  var mixer = mixitup('.portfolio__inner', {
+    load: {
+      filter: '.all'
+    }
   });
+
+
+
 })

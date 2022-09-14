@@ -90,7 +90,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
 
   }
   &__title {
@@ -157,7 +157,7 @@
   }
   &__item {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     gap: 35px;
   }
   &__item-title {
@@ -173,3 +173,91 @@
   }
 }
 //expertise
+
+
+//magic
+.magic {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__bg {
+    width: 50%;
+    background-image: url(../img/magic-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 840px;
+    background-position: center;
+  }
+  &__content {
+    width: 50%;
+    padding: 101px 0px 180px 110px;
+    background-color: #F6F8FA;
+  }
+  &__title {
+    max-width: 400px;
+    margin-bottom: 85px;
+  }
+  &__text {
+    max-width: 470px;
+    margin-top: 10px;
+  }
+}
+//magic
+
+
+//portfolio
+.portfolio {
+  padding-top: 140px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 115px;
+  }
+  &__title {
+  }
+  &__btns {
+    padding-top: 10px;
+  }
+  &__btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #333333;
+    margin-left: 21px;
+  }
+  &__items{
+    column-count: 4;
+    column-gap: 22px;
+  }
+  &__item {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 22px;
+    break-inside: avoid;
+  }
+  &__img {
+    width: 100%;
+  }
+  .mixitup-control-active{
+    border-bottom: 1px solid #FCBB08;
+  }
+  &__bottom {
+    background-color: #F6F8FA;
+    padding: 40px 0 38px;
+    margin-top: 50px;
+  }
+  &__bottom-link {
+    @extend %title-font;
+    letter-spacing: 1.2px;
+    line-height: 17px;
+    color: #242121;
+    display: flex;
+    justify-content: center;
+  }
+}
+//portfolio

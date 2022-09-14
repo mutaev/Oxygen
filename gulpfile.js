@@ -35,7 +35,7 @@ const paths = {
         dest: 'dist/css/'
     },
     scripts: {
-        src: ['src/scripts/**/*.coffee', 'src/scripts/**/*.ts', 'src/scripts/**/*.js', 'node_modules/slick-carousel/slick/slick.js'],
+        src: ['src/scripts/**/*.coffee', 'src/scripts/**/*.ts', 'src/scripts/**/*.js', 'node_modules/slick-carousel/slick/slick.js', 'node_modules/mixitup/dist/mixitup.js'],
         dest: 'dist/js/'
     },
     images: {
@@ -48,13 +48,6 @@ const paths = {
 function clean() {
     return del(['dist/*', '!dist/img'])
 }
-
-// gulp.task('minify', () => {
-//     return gulp.src('src/*.html')
-//         .pipe(htmlmin({ collapseWhitespace: true }))
-//         .pipe(gulp.dest('dist'));
-//     }); другой способ подключение 
-
 
 // минификация html
 function html() {
@@ -91,7 +84,6 @@ function styles(){
         .pipe(browsersync.stream())
 }
 
-// задача для обработки скриптов
 function scripts(){
     return gulp.src(paths.scripts.src)
     .pipe(sourcemaps.init())
@@ -99,7 +91,7 @@ function scripts(){
     // .pipe(ts({
     //     noImplicitAny: true,
     //     outFile: 'main.min.js'
-    // })) если нужен тайпскрипт, то нужно разкоментировать а кофе закоментировать  
+    // })) 
     .pipe(babel({
         presets: ['@babel/env']
     }))
@@ -114,7 +106,6 @@ function scripts(){
 
 }
 
-// минификация изображений
 async  function img(){
     gulp.src(paths.images.src)
     .pipe(newer(paths.images.dest))
@@ -128,7 +119,7 @@ async  function img(){
 }
 
 
-// для того чтобы стили и js  автоматически компилировались
+
 function watch(){
     browsersync.init({
         server: {
