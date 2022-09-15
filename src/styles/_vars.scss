@@ -12,6 +12,12 @@
   font-weight: 700;
 }
 
+%author-font{
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
