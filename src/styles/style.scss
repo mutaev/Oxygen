@@ -414,3 +414,129 @@
   }
 }
 //team
+
+//pricing
+.pricing {
+  padding: 144px 0 162px;
+  background-color: #F6F8FA;
+  &__title {
+    margin-bottom: 110px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+
+  }
+  &__item {
+    background-color: #fff;
+    text-align: center;
+    padding: 24px 25px 42px 25px;
+  }
+  &__item-name {
+    text-align: left;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 6px;
+  }
+  &__item-rate {
+    font-weight: 300;
+    font-size: 80px;
+    line-height: 109px;
+    margin-bottom: 50px;
+    &::before{
+      content: '$';
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 54px;
+      position: relative;
+      top: -27px;
+    }
+    span{
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+  &__list {
+    margin-bottom: 69px;
+  }
+  &__list-item {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 30px;
+  }
+  &__btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    @extend %title-font;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+}
+//pricing
+
+//contact
+.contact {
+  padding: 145px 0 165px;
+  &__form {
+    max-width: 569px;
+  }
+  &__title {
+    margin-bottom: 94px;
+  }
+  &__input-name {
+    width: 100%;
+    margin-bottom: 32px;
+    border: none;
+    border-bottom: 2px solid #373A39;
+
+  }
+  &__input-email {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #373A39;
+    margin-bottom: 45px;
+  }
+  &__message {
+    width: 100%;
+    border: none;
+    resize: none;
+    border-bottom: 2px solid #373A39;
+    height: 156px;
+  }
+  &__input-name,
+  &__input-email,
+  &__message {
+    padding: 8px 0;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  &__input-name::placeholder,
+  &__input-email::placeholder,
+  &__message::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 3.70909px;
+    color: #B8B8B8;
+  }
+  &__btn {
+    @extend %title-font;
+    cursor: pointer;
+    font-size: 11px;
+    line-height: 13px;
+    background-color: #000;
+    border: none;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 17px 58px 15px;
+  }
+}
+//contact
